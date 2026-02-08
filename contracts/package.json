@@ -1,0 +1,31 @@
+{
+  "name": "agentpay-protocol-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts for AgentPay Protocol - Autonomous Agent Escrow with Multi-Chain USDC",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:arbitrum": "hardhat run scripts/deploy.js --network arbitrumSepolia",
+    "deploy:base": "hardhat run scripts/deploy.js --network baseSepolia",
+    "deploy:all": "npm run deploy:arbitrum && npm run deploy:base",
+    "verify:arbitrum": "hardhat verify --network arbitrumSepolia",
+    "verify:base": "hardhat verify --network baseSepolia"
+  },
+  "keywords": [
+    "ethereum",
+    "smart-contracts",
+    "escrow",
+    "ai-agents",
+    "usdc",
+    "multi-chain"
+  ],
+  "author": "AgentPay Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@openzeppelin/contracts": "^5.4.0",
+    "dotenv": "^16.3.1",
+    "hardhat": "^2.19.4"
+  }
+}

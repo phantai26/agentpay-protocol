@@ -1,0 +1,69 @@
+{
+  "name": "agentpay-bridge",
+  "version": "1.0.0",
+  "description": "Multi-chain USDC bridge skill for autonomous agents. Supports Arbitrum, Base, Optimism, and Polygon testnets with Circle CCTP integration.",
+  "author": "AgentPay Protocol Team",
+  "license": "MIT",
+  "tags": [
+    "usdc",
+    "bridge",
+    "multi-chain",
+    "cctp",
+    "cross-chain",
+    "defi",
+    "payments"
+  ],
+  "main": "bridge_skill.py",
+  "requirements": [
+    "asyncio",
+    "web3>=6.0.0",
+    "python-dotenv>=1.0.0"
+  ],
+  "supported_chains": [
+    "arbitrum-sepolia",
+    "base-sepolia",
+    "optimism-sepolia",
+    "polygon-amoy"
+  ],
+  "features": [
+    "Check USDC balances across multiple chains",
+    "Find optimal bridge routes (cost + time)",
+    "Execute cross-chain transfers via Circle CCTP",
+    "Track transaction status",
+    "Estimate total costs including fees",
+    "Integration with AgentPay escrow"
+  ],
+  "installation": {
+    "command": "clawhub install agentpay-bridge",
+    "pip_install": "pip install -r requirements.txt"
+  },
+  "usage_examples": [
+    {
+      "title": "Check balances",
+      "code": "balances = await skill.check_all_balances(agent_address)"
+    },
+    {
+      "title": "Find best route",
+      "code": "route = skill.find_optimal_route(Chain.ARBITRUM_SEPOLIA, Chain.BASE_SEPOLIA, 100.0)"
+    },
+    {
+      "title": "Execute bridge",
+      "code": "tx = await skill.bridge_usdc(from_chain, to_chain, amount, recipient)"
+    },
+    {
+      "title": "Track transaction",
+      "code": "status = await skill.track_bridge_status(tx_hash)"
+    }
+  ],
+  "configuration": {
+    "required_env_vars": [
+      "PRIVATE_KEY (optional for signing)",
+      "RPC_URLS (optional, uses defaults)"
+    ]
+  },
+  "hackathon": {
+    "event": "OpenClaw USDC Hackathon 2026",
+    "track": "Best OpenClaw Skill",
+    "submission_date": "2026-02-08"
+  }
+}
