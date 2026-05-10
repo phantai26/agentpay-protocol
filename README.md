@@ -118,4 +118,3 @@ ReentrancyGuard on releasePayment
 Ownable access control
 This is a testnet PoC — production requires audit, multi-sig, timelocks
 
-Built for
