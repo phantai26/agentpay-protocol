@@ -2,9 +2,7 @@
 REM AgentPay Protocol - Windows Installation Script
 REM Run this in Command Prompt or PowerShell
 
-echo ==================================================
 echo AgentPay Protocol - Installation (Windows)
-echo ==================================================
 echo.
 
 REM Check Node.js
@@ -127,7 +125,6 @@ echo.
 
 echo ==================================================
 echo Verifying Installation
-echo ==================================================
 echo.
 
 echo Testing smart contract compilation...
@@ -161,7 +158,6 @@ type nul > contracts\deployments\.gitkeep
 
 echo ==================================================
 echo Installation Complete!
-echo ==================================================
 echo.
 echo Next steps:
 echo.
@@ -182,8 +178,7 @@ echo    cd skill
 echo    python agentpay_client.py
 echo.
 echo ==================================================
-echo Happy hacking!
-echo ==================================================
+
 echo.
 
 pause
